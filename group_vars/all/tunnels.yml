@@ -1,0 +1,8 @@
+---
+tunnel_cidr: 10.100.0.0/16
+tunnel_hub: rtr1.site1
+tunnel_asn: 65000
+tunnel_key: kbNB2jtfKqBvQkzMTurL8RNvBJDEtuNp
+site_number: "{{ interfaces.GigabitEthernet0/1.ip.address.ipv4_cidr.split('.')[1] | default('') }}"
+tunnel_network: "{{ tunnel_cidr | ipsubnet(30, site_number) }}"
+tunnel_ip: "{{ tunnel_network | ipaddr(-2) }}"

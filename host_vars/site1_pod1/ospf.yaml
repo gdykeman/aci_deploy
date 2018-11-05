@@ -1,0 +1,8 @@
+process_id: 1
+ospf_networks:
+  - net: "{{ interfaces.GigabitEthernet0/1.ip.address.ipv4_address | ipaddr('network') }}"
+    mask: "{{ interfaces.GigabitEthernet0/1.ip.address.ipv4_address | ipaddr('hostmask') }}"
+  - net: "{{interfaces.GigabitEthernet0/2.ip.address.ipv4_address  | ipaddr('network') }}"
+    mask: "{{ interfaces.GigabitEthernet0/2.ip.address.ipv4_address | ipaddr('hostmask') }}"
+  - net: "{{ interfaces.GigabitEthernet0/3.ip.address.ipv4_address  | ipaddr('network') }}"
+    mask: "{{ interfaces.GigabitEthernet0/3.ip.address.ipv4_address | ipaddr('hostmask') }}"

@@ -1,0 +1,30 @@
+interfaces:
+  GigabitEthernet0/1:
+    name: GigabitEthernet0/1
+    ip:
+      address:
+        ipv4_address: 10.0.0.254
+        ipv4_netmask: 255.255.255.0
+        ipv4_cidr: 10.0.0.254/24
+    switchport:
+      mode: trunk
+
+  GigabitEthernet0/2:
+    name: GigabitEthernet0/2
+    ip:
+      address:
+        ipv4_address: 10.0.1.254
+        ipv4_netmask: 255.255.255.0
+        ipv4_cidr: 10.0.1.254/24
+    switchport:
+      mode: trunk
+
+  GigabitEthernet0/3:
+    name: GigabitEthernet0/3
+    ip:
+      address:
+        ipv4_address: 10.0.2.254
+        ipv4_netmask: 255.255.255.0
+        ipv4_cidr: 10.0.2.254/24
+    switchport:
+      mode: trunk

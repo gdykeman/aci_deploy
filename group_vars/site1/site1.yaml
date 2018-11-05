@@ -1,0 +1,73 @@
+access_lists:
+    2:
+      entries:
+      - action: permit
+        source_network: 10.0.0.140
+        source_wildcard: 0.0.0.0
+        whitespace: ' '
+      number: 2
+      type: standard
+    5:
+      entries:
+      - action: permit
+        source_network: 10.0.0.206
+        source_wildcard: 0.0.0.0
+        whitespace: ' '
+      - action: permit
+        source_network: 10.0.0.207
+        source_wildcard: 0.0.0.0
+        whitespace: ' '
+      - action: permit
+        source_network: 10.0.0.208
+        source_wildcard: 0.0.0.0
+        whitespace: ' '
+      - action: permit
+        source_network: 10.0.0.209
+        source_wildcard: 0.0.0.0
+        whitespace: ' '
+      - action: permit
+        source_network: 10.0.0.210
+        source_wildcard: 0.0.0.0
+        whitespace: ' '
+      - action: permit
+        source_network: 10.0.0.211
+        source_wildcard: 0.0.0.255
+        whitespace: ' '
+      - action: permit
+        source_network: 10.0.0.212
+        source_wildcard: 0.0.0.255
+        whitespace: ' '
+      - action: permit
+        source_network: 10.0.0.213
+        source_wildcard: 0.0.0.255
+        whitespace: ' '
+      - action: permit
+        source_network: 10.0.0.214
+        source_wildcard: 0.0.0.255
+        whitespace: ' '
+      - action: permit
+        source_network: 10.0.0.215
+        source_wildcard: 0.0.0.15
+        whitespace: ' '
+      - action: permit
+        source_network: 10.0.0.216
+        source_wildcard: 0.0.0.15
+        whitespace: ' '
+      - action: permit
+        source_network: 10.0.0.217
+        source_wildcard: 0.0.0.255
+        whitespace: ' '
+      number: 5
+      type: standard
+
+    100:
+      entries:
+      - action: deny
+        destination_network: 13.178.6.186
+        destination_wildcard: 0.0.0.0
+        protocol: esp
+        source_network: any
+        source_wildcard: any
+        whitespace: '   '
+      number: 100
+      type: extended
